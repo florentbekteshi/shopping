@@ -1,0 +1,29 @@
+<div class="login">
+  <div class="container">
+
+
+    <div class="login__form">
+      <div class="login__title">
+        <h2>Login</h2>
+      </div>
+
+      <div class="login__item">
+        <div class="login__username">
+          <label for="name">Email</label>
+          <input type="email" id="name" v-model="data.email">
+        </div>
+        <div class="login__password">
+          <label for="name">Password</label>
+          <input type="password" id="name" v-model="data.password">
+        </div>
+        <div class="login__button">
+          <button @click="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

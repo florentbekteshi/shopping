@@ -1,0 +1,119 @@
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 700px;
+  }
+  
+  .modal-footer{
+      text-align: end;
+  }
+  .modal-footer button{
+      height: 40px;
+      width: 100px;
+  }
+  .modal-footer button:nth-child(1){
+      background-color: rgba(128, 128, 128, 0.5);
+      border-radius: 5px;
+      border: 1px solid rgba(128, 128, 128, 0.5);
+      color: #fefefe;
+  }
+  .modal-footer button:nth-child(2){
+    background-color: rgba(255, 0, 0, 0.596);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.596);
+    color: #fefefe;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background: none;
+  }
+  .close:hover{
+      background: rgba(255, 0, 0, 0.596);
+      color: white !important;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .modal-body{
+      padding-top: 20px;
+      padding-bottom: 60px;
+  }
+  .modal__body-item-1{
+      width: 50%;
+      margin: 30px 30px 0px 0px ;
+  }
+
+  .modal-body-item{
+      width: 100%;
+      display: flex;
+  }
+  .modal__body-item-1 input{
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid rgb(138, 137, 137);
+      display: flex;
+      font-size: 18px;
+      width: 100%;
+      margin: 10px 20px 0px 0px;
+  }
+  .modal__body-item-1 label{
+      font-size: 20px;
+
+  }
+  .modal__body-item-1 select{
+      font-size: 16px;
+      width: 100%;
+      display: flex;
+      height: 30px;
+      border: 1px solid rgb(138, 137, 137);
+      border-radius: 5px;
+      margin-top: 10px;
+  }
+  .modal__header{
+      padding-bottom: 20px;
+      border-bottom: 1px solid gray;
+  }
+  .modal__header h2{
+      margin: 0px;
+  }
+  .modal-footer{
+      padding-top: 15px;
+  }
+  .modal-footer-save button{
+      width: 100%;
+      background: #e45227 !important;
+      color: white;
+  }
+  .border-danger{
+      border:1px solid red !important;
+  }

@@ -1,0 +1,17 @@
+<guestLayout>
+  <div class="homepage">
+    <div class="container">
+      <div class="homepage__product">
+        <a class="homepage__item" v-for="row in products">
+          <img :src="row.image" alt="">
+          <p>{{ row.title }}</p>
+          <h2>{{ row.price }} $</h2>
+          <div class="homepage__item-button">
+            <router-link :to="{ name: 'singleproject', params: { name: row.title } }"><button>Shiko Detajet</button></router-link>
+            
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</guestLayout>

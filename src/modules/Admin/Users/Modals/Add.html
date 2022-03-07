@@ -1,0 +1,34 @@
+<div class="home-modal">
+    <div id="myModal" class="modal" >
+      <div class="modal-content">
+        <button class="close" @click="$emit('toggleFunc')">&times;</button>
+        <div class="modal__header">
+            <h2 >{{editMode ? 'Edit Product': 'Add Product'}}</h2>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-item">
+                <div class="modal__body-item-1">
+                    <label>Username</label>
+                    <input id="nameInput" v-model="data.username"  type="text" :class="{ 'border-danger': errors.username }">
+                </div>
+                <div class="modal__body-item-1">
+                    <label>Email Address</label>
+                    <input id="emailInput"  v-model="data.email" type="email" :class="{ 'border-danger': errors.email }">
+                </div>
+            </div>
+            <div class="modal-body-item">
+                <div class="modal__body-item-1">
+                    <label>Password</label>
+                    <input id="nameInput"  v-model="data.password" type="password" :class="{ 'border-danger': errors.password }">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-footer-save">
+                <button v-if="!editMode" @click="addUser()">Add</button>
+                <button v-else @click="editRow()">Edit</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

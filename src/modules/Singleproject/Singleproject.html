@@ -1,0 +1,46 @@
+<guestLayout>
+  <div class="singleproject">
+    <div class="container">
+     
+      <div class="singleproject__item">
+        <div class="singleproject__img">
+          <img :src="product.image" alt="">
+        </div>
+        <div class="singleproject__desc">
+          <h2>Cmimi i produktit: {{ product.price }} $</h2>
+          <h2>{{ product.title }}</h2>
+          <div class="product__code">
+            <p>Kodi i produktit</p>
+            <p>300882</p>
+          </div>
+          <div class="product__reliability">
+            <p>Besueshmëria:</p>
+            <p>100%</p>
+          </div>
+          <div class="product__EAN">
+            <p>EAN:</p>
+            <p>1 vjet</p>
+          </div>
+          <div class="product__warranty">
+            <p>Garancioni nga prodhuesi:</p>
+            <p>1 vjet</p>
+          </div>
+          <div class="product__capacity">
+            <p>Kapaciteti GB:</p>
+            <p>32</p>
+          </div>
+
+          <div class="singleproject__payments">
+            <h2>PAGESAT MUND T'I BENI NE:</h2>
+            <div class="singleproject__payments-item">
+              <img src="@/assets/img/paypal.png" alt="">
+              <img src="@/assets/img/maestro.png" alt="">
+              <img src="@/assets/img/visa.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <modalPayment v-if="showModalNew" @toggleFunc="toggleModalNew" />
+</guestLayout>

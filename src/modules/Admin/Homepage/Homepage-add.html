@@ -1,0 +1,32 @@
+
+<adminLayout>
+    <div class="homepage">
+        <div class="container">
+          <div class="homepage__item">
+            <h2>Product</h2>
+            <button @click="toggleModalNew()">Add Product</button>
+          </div>
+          <table id="customers">
+            <tr>
+              <th>Id</th>
+              <th>Img</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            <tr v-for="(row,i) in products" :key="i">
+              <td>{{i+1}}</td>
+              <td><img :src="row.image" alt=""></td>
+              <td>{{ row.title}}</td>
+              <td>{{ row.price }} $</td>
+              <td><img @click="rowEdit = row; indexOf = i; toggleEditModal()" src="@/assets/img/edit.png" alt=""></td>
+              <td><img @click="deleteRow(i)" src="@/assets/img/delete.png" alt=""></td> 
+            </tr>
+          </table>
+        </div>
+        <modalAddproduct v-if="showModalNew" @toggleFunc="toggleModalNew" :editMode="editMode" @addRow="addRow" @editRow="editFunc" :row="rowEdit"/>
+      </div>
+    </adminLayout>
+        
+    

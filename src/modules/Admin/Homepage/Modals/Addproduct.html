@@ -1,0 +1,34 @@
+<div class="home-modal">
+    <div id="myModal" class="modal" style="display:block;">
+      <div class="modal-content">
+        <button class="close" @click="$emit('toggleFunc')">&times;</button>
+        <div class="modal__header">
+            <h2>{{editMode ? 'Edit Product': 'Add Product'}}</h2>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-item">
+                <div class="modal__body-item-1" >
+                    <label>Title</label>
+                    <input id="titleInput" v-model="details.title"  type="text" :class="{ 'border-danger': errors.title }">
+                </div>
+                <div class="modal__body-item-1">
+                    <label>Price</label>
+                    <input id="priceInput"  v-model="details.price" type="number" :class="{ 'border-danger': errors.price }">
+                </div>
+            </div>
+            <div class="modal-body-item">
+                <div class="modal__body-item-1">
+                    <label>Choose File</label>
+                    <input id="fileInput"  type="file" >
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-footer-save">
+                <button v-if="!editMode" @click="addProduct()">ADD PRODUCT</button>
+                <button v-else @click="editRow()">EDIT PRODUCT</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,146 @@
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1180px;
+    }
+}
+  
+@media (min-width: 1440px) {
+    .container {
+      max-width: 1380px;
+    }
+}
+  
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1570px;
+    }
+}
+.singleproject__item{
+  display: flex;
+  width: 100%;
+}
+.singleproject__img{
+  width: 50%;
+}
+.singleproject__img img{
+  width: 80%;
+  height: 600px;
+}
+.product__code{
+  display: flex;
+  justify-content: space-between;
+}
+.product__reliability{
+  display: flex;
+  justify-content: space-between;
+}
+.product__EAN{
+  display: flex;
+  justify-content: space-between;
+}
+.product__warranty{
+  display: flex;
+  justify-content: space-between;
+}
+.product__capacity{
+  display: flex;
+  justify-content: space-between;
+}
+.singleproject__desc{
+  padding: 0px 40px;
+  width: 50%;
+}
+
+.product__quantity{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.product__quantity-item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid gray;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.product__quantity-item p{
+  margin: 0px;
+}
+
+.singleproject__payments-item{
+  display: flex;
+  justify-content: space-between;
+}
+.singleproject__payments h2:nth-child(1){
+  font-size: 25px !important;
+  margin-top: 40px !important;
+}
+.singleproject__payments-item img{
+  width: 120px;
+  height: 120px;
+}
+.product__quantity-item img{
+  width: 20px;
+  height: 20px;
+}
+.singleproject__button{
+  padding: 0px 80px;
+  margin-left: 40px;
+}
+.singleproject__button button{
+  display: block;
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  border-radius: 15px;
+  border: none;
+}
+.singleproject__button button:nth-child(1){
+  background: #ffc052;
+}
+.singleproject__button button:nth-child(2){
+  color: white;
+  background: #e45227;
+}
+.singleproject__shopping-cart h2{
+  margin-bottom: 50px;
+}
+.singleproject__desc h2:nth-child(1){
+  font-size: 35px;
+  margin-top: 0px;
+}
+.singleproject__desc p{
+  font-size: 20px;
+}

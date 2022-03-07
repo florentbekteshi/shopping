@@ -1,0 +1,32 @@
+
+<adminLayout>
+<div class="user">
+    <div class="container">
+      <div class="user__item">
+        <h2>Users</h2>
+        <button @click="toggleModalNew()">Add Users</button>
+      </div>
+      <table id="customers">
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <tr v-for="(row,i) in users" :key="i">
+          <td>{{i+1}}</td>
+          <td>{{row.username}}</td>
+          <td>{{row.email}}</td>
+          <td>{{row.password}}</td>
+          <td><img @click="rowEdit = row; indexOf = i; toggleEditModal()" src="@/assets/img/edit.png" alt=""></td>
+          <td><img @click="deleteRow(i)" src="@/assets/img/delete.png" alt=""></td> 
+        </tr>
+      
+      </table>
+    </div>
+    <modalAdd v-if="showModalNew" @toggleFunc="toggleModalNew" :editMode="editMode" @addRow="addRow" @editRow="editFunc" :row="rowEdit"/>
+  </div>
+</adminLayout>
+    
